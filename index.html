@@ -1208,38 +1208,26 @@
 					</button>
 
 					<div class="modal-body contact-form-modal__body">
-						<form id="contact-form" netlify class="contact-form" action="/contact.php">
-							<div class="row row-16">
-								<div class="col-lg-6">
-									<div class="form-group">
-										<label for="name">Name<abbr>*</abbr></label>
-										<input type="text" name="NAME" id="name" required="">
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="form-group">
-										<label for="email">Email<abbr>*</abbr></label>
-										<input type="email" name="EMAIL" id="email" required="">
-									</div>
-								</div>
-							</div>
-
-							<label for="message">Message<abbr>*</abbr></label>
-							<textarea name="MESSAGE" id="message" rows="6"></textarea>              
-							<div class="gdpr-checkbox">
-								<label class="gdpr-checkbox__label">
-									<input class="gdpr-checkbox__input" name="AGREE_TO_TERMS" type="checkbox" value="1" required="">
-									<span class="gdpr-checkbox__text">I agree to storage of my email according to <a href="#" target="_blank">Privacy Policy</a>
-									</span>
-								</label>
-							</div>
-							<div class="text-center">
-								<input id="contact-form__submit" type="submit" class="btn btn--lg btn--color" value="Send Message" href="www.apple.com">
-							</div>
-							
-							<div id="contact-form__message" class="contact-form__message" role="alert"></div>
-							
-						</form>
+						<form name="contact" method="POST" data-netlify="true">
+							<p>
+							  <label>Your Name: <input type="text" name="name" /></label>   
+							</p>
+							<p>
+							  <label>Your Email: <input type="email" name="email" /></label>
+							</p>
+							<p>
+							  <label>Your Role: <select name="role[]" multiple>
+								<option value="leader">Leader</option>
+								<option value="follower">Follower</option>
+							  </select></label>
+							</p>
+							<p>
+							  <label>Message: <textarea name="message"></textarea></label>
+							</p>
+							<p>
+							  <button type="submit">Send</button>
+							</p>
+						  </form>
 					</div>
 				</div>
 			</div>
