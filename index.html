@@ -1208,7 +1208,7 @@
 					</button>
 
 					<div class="modal-body contact-form-modal__body">
-						<form name="contact" method="POST" data-netlify="true">
+						<form name="contact" method="POST" netlify data-netlify="true">
 							<p>
 							  <label>Your Name: <input type="text" name="name" /></label>   
 							</p>
@@ -1216,13 +1216,18 @@
 							  <label>Your Email: <input type="email" name="email" /></label>
 							</p>
 							<p>
-							  <label>Your Role: <select name="role[]" multiple>
-								<option value="leader">Leader</option>
-								<option value="follower">Follower</option>
+							  <label>Service you require: <select name="service[]" multiple>
+								<option value="photo">Photography/Photo Editing</option>
+								<option value="video">Videography/Video Editing</option>
+								<option value="web">Web Development</option>
+								<option value="business">Business and Brand Consultancy</option>
+								<option value="follower">Social Media Management</option>
+								<option value="design">Design by Awful&reg;</option>
+								<option value="follower">Social Media Management</option>
 							  </select></label>
 							</p>
 							<p>
-							  <label>Message: <textarea name="message"></textarea></label>
+							  <label>Short Brief: <textarea name="message"></textarea></label>
 							</p>
 							<p>
 							  <button class="btn btn--lg btn--color" type="submit">Send</button>
